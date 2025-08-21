@@ -1,0 +1,173 @@
+/* Estilos Básicos (sin cambios) */
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0; /* Fondo claro */
+    color: #333; /* Texto oscuro */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Encabezado (sin cambios) */
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    color: #0056b3; /* Color azul para el título */
+}
+
+/* Contenedor de la Galería (sin cambios) */
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta de Coche (sin cambios) */
+.car-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.car-card-body {
+    padding: 15px;
+}
+
+.car-card-title {
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+}
+
+.car-card-price {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.view-details-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.is-hidden {
+    display: none;
+}
+
+.modal-content-wrapper {
+    background-color: #111827; /* Fondo oscuro */
+    color: #d1d5db; /* Color de texto claro */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px; /* Aumentado para el diseño de dos columnas */
+    max-height: 90vh; /* Ajuste para que se vea en cualquier pantalla */
+    position: relative;
+    overflow-y: auto;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #ffffff; /* Color blanco para la 'x' */
+    cursor: pointer;
+    z-index: 10;
+}
+
+.modal-content {
+    display: flex; /* Habilita Flexbox */
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        flex-direction: row; /* Pone los elementos en fila en pantallas más grandes */
+    }
+    .modal-image-wrapper {
+        width: 50%;
+    }
+    .modal-text-content {
+        width: 50%;
+        text-align: left;
+    }
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.modal-title {
+    font-size: 2.25rem;
+    margin-top: 0;
+    color: #ffffff; /* Título en blanco */
+}
+
+.modal-price, .modal-description {
+    color: #9ca3af; /* Color gris suave */
+}
+
+.modal-specs-heading {
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #374151; /* Línea separadora */
+}
+
+.modal-spec-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.modal-spec-label {
+    color: #9ca3af;
+}
+.modal-spec-value {
+    font-weight: bold;
+    color: #ffffff;
+}
